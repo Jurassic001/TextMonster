@@ -142,11 +142,14 @@ public class Player {
            System.out.println("\n\nThe fabric of space and time opens wide to swallow you whole. You are damned to an eternity in the black expanse of nothing.");
            Thread.sleep(1000);
            Board.hasWon = true;
+           return;
        }
        if (!Board.getCurRoom().equals("monster") && !Board.getCurRoom().equals("boss") && !weapons.contains("The Radiant Dissonance Of The Creator")) {
+           // Add a line for no sword, where you punch yourself in the face and fall to the floor
            System.out.println("\n\nYou wildly swing your sword around the empty room. You accidentally stab yourself, and die due to blood loss.");
            Thread.sleep(1000);
            Board.hasWon = true;
+           return;
        }
        if (weapons.contains("The Radiant Dissonance Of The Creator")) {
            System.out.println("\n\nYou obliterated your enemy with The Radiant Dissonance Of The Creator. You feel guilt.");
@@ -178,4 +181,18 @@ public class Player {
            }
        }
    }
+
+   
+    public static void help() throws InterruptedException{
+        System.out.print("\n\nYou called for help");
+        for(int i = 1; i <= 3; i++){
+        System.out.print(" . ");
+        Thread.sleep(500);
+        }
+        System.out.print("\nSuddenly you are blessed with divine knowledge!");
+        Thread.sleep(500);
+        // Give the user help aka tell them the controls
+    }
 }
+
+

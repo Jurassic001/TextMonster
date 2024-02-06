@@ -43,25 +43,26 @@ public static void main(String[] args) throws InterruptedException {
                    p.attack();
                    break;
                case "help":
-                   System.out.print("\n\nYou called for help");
-                   for(int i = 1; i <= 6; i++){
-                    System.out.print(" . ");
-                    Thread.sleep(500);
-                   }
-                   System.out.print(" But nobody came");
-                   Thread.sleep(500);
+                   p.help();
                    break;
                case "dodge":
-                   System.out.println("\n\nYou dive headfirst into a nearby wall, instantly killing you.");
+                   System.out.println("\n\nYou dive headfirst into a nearby wall, instantly killing you");
                    Thread.sleep(1000);
                    b.hasWon = true;
                    break;
                case "turn back":
-                   System.out.println("\n\nYou call out to the universe, begging to be sent back to the start of your adventure.");
+                   System.out.println("\n\nYou call out to the universe, begging to be sent back to the start of your adventure");
                    Thread.sleep(750);
-                   System.out.println("\nThe universe answers, and in a flash of light you are transported to the room you started in.");
-                   Thread.sleep(400);
+                   System.out.println("\nThe universe answers, and in a flash of light you are transported to the room you started in");
+                   Thread.sleep(600);
                    p.setPos(4, 2);
+                   break;
+               default: // Invalid commands are recognized by the main character and a hint is given
+                   System.out.println("\n\nYou feel confused and forgetful, as if you can't understand what you wanted to do before");
+                   Thread.sleep(600);
+                   System.out.println("\nThrough the fog of confusion, you feel the urge to ask for help");
+                   Thread.sleep(600);
+                   break;
            }
        }
        s.close();
