@@ -63,16 +63,6 @@ public class Main {
                     Thread.sleep(600);
                     break;
             }
-            if(b.hasWon) {
-                System.out.println("\n\nWould you like to play again? ");
-                String restart = s.nextLine();
-                switch (restart) {
-                    case "yes":
-                    case "y":
-                        p.setPos(4, 2);
-                        b.reset();
-                }
-            }
         }
         s.close();
     }
