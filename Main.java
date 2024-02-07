@@ -63,7 +63,7 @@ public class Main {
                     break;
             }
             if(b.hasWon) {
-                System.out.println("Would you like to play again? ");
+                System.out.println("\n\nWould you like to play again? ");
                 String restart = s.nextLine();
                 switch (restart) {
                     case "yes":
