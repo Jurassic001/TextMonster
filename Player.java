@@ -38,9 +38,11 @@ public class Player {
                     }
                     pos[1] += 1;
                     System.out.println("\n\n\n\n\n");
+                    Thread.sleep(100);
                 } 
                 else {
                     System.out.println("\n\nYou cannot move right");
+                    Thread.sleep(500);
                 }
                 break;
             case 2:
@@ -63,27 +65,33 @@ public class Player {
                     }
                     pos[1] -= 1;
                     System.out.println("\n\n\n\n\n");
+                    Thread.sleep(100);
                 } 
                 else {
                     System.out.println("\n\nYou cannot move left");
+                    Thread.sleep(500);
                 }
                 break;
             case 3:
                 if (Board.getCurRoom().equals("stair up")) {
                     pos[0] -= 1;
                     System.out.println("\n\n\n\n\n");
+                    Thread.sleep(100);
                 } 
                 else {
                     System.out.println("\n\nYou cannot go up");
+                    Thread.sleep(500);
                 }
                 break;
             case 4:
                 if (Board.getCurRoom().equals("stair down")) {
                     pos[0] += 1;
                     System.out.println("\n\n\n\n\n");
+                    Thread.sleep(100);
                 } 
                 else {
                     System.out.println("\n\nYou cannot go down");
+                    Thread.sleep(500);
                 }
                 break;
         }
