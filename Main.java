@@ -42,6 +42,7 @@ public class Main {
                     break;
                 case "help":
                     p.help();
+                    s.nextLine();
                     break;
                 case "dodge":
                     System.out.println("\n\nYou dive headfirst into a nearby wall, instantly killing you");

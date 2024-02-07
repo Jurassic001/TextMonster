@@ -201,5 +201,14 @@ public class Player {
         Thread.sleep(500);
         // Give the user help aka tell them the commands
         // Mention that all commands are lowercase
+        System.out.println("\n\nYou realize that all of your commands must be in lowercase");
+        Thread.sleep(200);
+        System.out.println("You understand that you can move left and right through hallways, and up and down using stairs");
+        Thread.sleep(200);
+        System.out.println("You come to the conclusion that you can grab items and attack monsters");
+        Thread.sleep(200);
+        System.out.println("You know you can dodge, although you are quite clumsy and might hurt yourself");
+        Thread.sleep(500);
+        System.out.print("Press Enter to continue on your adventure. ");
     }
 }
