@@ -68,7 +68,7 @@ public class Board {
                 System.out.println("You see treasure");
                 break;
             case "j":
-                System.out.println("You see \uD83D\uDCA7\uFE0E☜\uFE0E\uD83D\uDC4D\uFE0E☼\uFE0E☜\uFE0E❄\uFE0E\uD83D\uDCA7\uFE0E \uD83D\uDD46\uFE0E☠\uFE0E☞\uFE0E⚐\uFE0E☹\uFE0E\uD83D\uDC4E\uFE0E\uD83D\uDCEA\uFE0E \uD83D\uDCA3\uFE0E✡\uFE0E\uD83D\uDCA7\uFE0E❄\uFE0E☜\uFE0E☼\uFE0E✡\uFE0E \uD83D\uDD46\uFE0E☠\uFE0E❄\uFE0E⚐\uFE0E☹\uFE0E\uD83D\uDC4E\uFE0E");
+                System.out.println("You see \uD83D\uDCA7\uFE0E☜\uFE0E\uD83D\uDC4D\uFE0E☼\uFE0E☜\uFE0E❄\uFE0E\uD83D\uDCA7\uFE0E \uD83D\uDD46\uFE0E☠\uFE0E☞\uFE0E⚐\uFE0E☹\uFE0E\uD83D\uDC4E\uFE0E\uD83D\uDCEA\uFE0E \uD83D\uDCA3\uFE0E✡\uFE0E\uD83D\uDCA7\uFE0E❄\uFE0E☜\uFE0E☼\uFE0E✡\uFE0E \uD83D\uDD46\uFE0E☠\uFE0E❄\uFE0E⚐\uFE0E☹\uFE0E\uD83D\uDC4E\uFE0E  This is an intended, secret feature ;)");
                 break;
             case "secret":
                 System.out.println("you see the fabric of space and time ripping beneath you. You're too far in Ms. Jones. turn back. . . turn back. . . turn back. . .");
