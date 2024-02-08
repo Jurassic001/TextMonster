@@ -199,6 +199,8 @@ public class Player {
                 weapons.remove("sword");
                 System.out.println("\n\nYou defeated the monster");
                 Thread.sleep(500);
+                System.out.println("\nYour sword broke when you killed the monster . . . You'll need to find another one");
+                Thread.sleep(750);
                 return;
             }
         }
@@ -208,6 +210,10 @@ public class Player {
                 Thread.sleep(250);
                 System.out.println("\nThe boss is dead");
                 Thread.sleep(750);
+                weapons.remove("sword");
+                weapons.remove("magic rocks");
+                System.out.println("\nYour sword and magic rocks were destroyed in the fight with the boss");
+                Thread.sleep(1000);
                 return;
             } 
             else {
