@@ -106,7 +106,7 @@ public class Player {
             case "prize":
             case "stick":
                 if (weapons.size() >= 3) {
-                    System.out.println("\n\ninventory full");
+                    System.out.println("\n\nYour pockets are full");
                     Thread.sleep(500);
                     return;
                 }
@@ -134,10 +134,15 @@ public class Player {
                 return;
             case "secret":
                 if(!weapons.contains("The Radiant Dissonance Of The Creator")){
+                    if (weapons.size() >= 3){
+                        System.out.println("\n\nThere's something here . . . but your pockets are too full to carry it");
+                        Thread.sleep(750);
+                        return;
+                    }
                     weapons.add("The Radiant Dissonance Of The Creator");
                     Board.setCurRoom("");
                     System.out.println("\n\nYou picked up The Radiant Dissonance Of The Creator");
-                    Thread.sleep(500);
+                    Thread.sleep(750);
                     System.out.println("\nInventory: ");
                     Thread.sleep(200);
                     for (String s : weapons) {
