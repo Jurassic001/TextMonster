@@ -140,7 +140,6 @@ public class Player {
                         return;
                     }
                     weapons.add("The Radiant Dissonance Of The Creator");
-                    Board.setCurRoom("");
                     System.out.println("\n\nYou picked up The Radiant Dissonance Of The Creator");
                     Thread.sleep(750);
                     System.out.println("\nInventory: ");
