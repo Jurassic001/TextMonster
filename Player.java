@@ -133,17 +133,25 @@ public class Player {
                 Thread.sleep(1000);
                 return;
             case "secret":
-                weapons.add("The Radiant Dissonance Of The Creator");
-                Board.setCurRoom("");
-                System.out.println("\n\nYou picked up The Radiant Dissonance Of The Creator");
-                Thread.sleep(500);
-                System.out.println("\nInventory: ");
-                Thread.sleep(200);
-                for (String s : weapons) {
-                    System.out.println(s + " ");
+                if(!weapons.contains("The Radiant Dissonance Of The Creator")){
+                    weapons.add("The Radiant Dissonance Of The Creator");
+                    Board.setCurRoom("");
+                    System.out.println("\n\nYou picked up The Radiant Dissonance Of The Creator");
+                    Thread.sleep(500);
+                    System.out.println("\nInventory: ");
                     Thread.sleep(200);
+                    for (String s : weapons) {
+                        System.out.println(s + " ");
+                        Thread.sleep(200);
+                    }
+                    Thread.sleep(750);
                 }
-                Thread.sleep(750);
+                else {
+                    System.out.println("\n\nYou already possess The Radiant Dissonance Of The Creator");
+                    Thread.sleep(500);
+                    System.out.println("\nYou must turn back...");
+                    Thread.sleep(1000);
+                }
                 return;
             default:
                 System.out.println("\n\nThere is nothing to grab");
