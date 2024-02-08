@@ -175,25 +175,32 @@ public class Player {
                 Board.hasWon = true;
                 return;
             }
+            else {
+                System.out.println("\n\nThere are no enemies in sight, so you punch a nearby wall");
+                Thread.sleep(750);
+                return;
+            }
         }
         else if (weapons.contains("The Radiant Dissonance Of The Creator")) {
-            System.out.println("\n\nYou obliterated your enemy with The Radiant Dissonance Of The Creator. You feel guilt.");
+            System.out.println("\n\nYou obliterated the " +  Board.getCurRoom() + " with The Radiant Dissonance Of The Creator. You feel guilt.");
             Board.setCurRoom("");
-            Thread.sleep(500);
-            return;
-        }
-        else if (!weapons.contains("sword") && Board.getCurRoom().equals("monster")) {
-            System.out.println("\n\nYou died to the monster. You need a weapon to attack.");
-            Thread.sleep(500);
-            Board.hasWon = true;
+            Thread.sleep(1000);
             return;
         }
         else if (Board.getCurRoom().equals("monster")) {
-            Board.setCurRoom("");
-            weapons.remove("sword");
-            System.out.println("\n\nYou defeated the monster");
-            Thread.sleep(500);
-            return;
+            if (!weapons.contains("sword")){
+                System.out.println("\n\nYou died to the monster. You need a weapon to attack.");
+                Thread.sleep(500);
+                Board.hasWon = true;
+                return;
+            }
+            else {
+                Board.setCurRoom("");
+                weapons.remove("sword");
+                System.out.println("\n\nYou defeated the monster");
+                Thread.sleep(500);
+                return;
+            }
         }
         else if(Board.getCurRoom().equals("boss")) {
             if (weapons.contains("magic rocks") && weapons.contains("sword")) {
