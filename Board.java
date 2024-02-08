@@ -35,7 +35,7 @@ public class Board {
     }
 
 
-    public void printCurRoom() {
+    public void printCurRoom() throws InterruptedException {
         switch (board[Player.getPos()[0]][Player.getPos()[1]]) {
             case "":
                 System.out.println("You see nothing");
@@ -71,7 +71,15 @@ public class Board {
                 System.out.println("You see \uD83D\uDCA7\uFE0E☜\uFE0E\uD83D\uDC4D\uFE0E☼\uFE0E☜\uFE0E❄\uFE0E\uD83D\uDCA7\uFE0E \uD83D\uDD46\uFE0E☠\uFE0E☞\uFE0E⚐\uFE0E☹\uFE0E\uD83D\uDC4E\uFE0E\uD83D\uDCEA\uFE0E \uD83D\uDCA3\uFE0E✡\uFE0E\uD83D\uDCA7\uFE0E❄\uFE0E☜\uFE0E☼\uFE0E✡\uFE0E \uD83D\uDD46\uFE0E☠\uFE0E❄\uFE0E⚐\uFE0E☹\uFE0E\uD83D\uDC4E\uFE0E  (This is an intended, secret feature)");
                 break;
             case "secret":
-                System.out.println("You see the fabric of space and time ripping beneath you. You're too far in Miss. Jones\n\nturn back. . . turn back. . . turn back. . .");
+                System.out.println("You see the fabric of space and time ripping beneath you. You're too far in Miss. Jones\n");
+                String[] turnback = {"t", "u", "r", "n", " ", "b", "a", "c", "k", " ", ".", " ", ".", " ", ".", " "};   
+                for(int i = 0; i < 3; i++){
+                    for(String c : turnback){
+                        System.out.print(c);
+                        Thread.sleep(50);
+                    }
+                }
+                System.out.println("");             
                 break;
         }
     }
