@@ -213,6 +213,7 @@ public class Player {
                 System.out.println("\n\nUsing your magic rocks, you enchant your sword with the ability to pierce armor and strike the boss through his heart.");
                 Thread.sleep(250);
                 System.out.println("\nThe boss is dead");
+                Board.setCurRoom("");
                 Thread.sleep(750);
                 weapons.remove("sword");
                 weapons.remove("magic rocks");
